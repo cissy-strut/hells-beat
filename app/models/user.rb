@@ -7,6 +7,10 @@ class User < ApplicationRecord
   INSTRUMENTS = %w[guitare piano triangle voix platines]
 
   has_many :matchings
+  
+  has_one_attached :photo
+  
+
 
   validates :pseudo, presence: true
   validates :instrument, presence: true
@@ -18,4 +22,5 @@ class User < ApplicationRecord
   validates :style, presence: true
   validates :birth_date, presence: true
   validates :gender, presence: true
+
 end
