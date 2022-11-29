@@ -8,7 +8,6 @@ class AddColumnsToUsers < ActiveRecord::Migration[7.0]
     add_column :users, :bio, :string
     add_column :users, :experience, :integer
     add_column :users, :style, :string
-    add_column :users, :profile_pic, :string
     add_column :users, :birth_date, :date
     add_column :users, :gender, :string
   end
