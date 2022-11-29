@@ -21,9 +21,9 @@ bob = User.create!(nickname: 'bob', instrument: 'guitare', city: 'Rennes', count
 require "open-uri"
 
 amy = User.create!(nickname: 'amy', instrument: 'voix', city: 'Montpellier', country: 'France', email: 'amy.winehouse@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment fantastique", experience: 27, style:"soul", birth_date: "2000-10-07", gender: "Femme" )
-amy = User.new(title: "Amy", body: "Amy winehouse")
-file = URI.open("https://media.vogue.fr/photos/5c360db03b3a64c63eb378b5/master/w_1600%2Cc_limit/winehouse_3797.jpeg?lang=eng")
-amy.photo.attach(io: file, filename: "amywinehouse.jpg", content_type: "image/jpeg")
+# amy = User.new(title: "Amy", body: "Amy winehouse")
+# file = URI.open("https://media.vogue.fr/photos/5c360db03b3a64c63eb378b5/master/w_1600%2Cc_limit/winehouse_3797.jpeg?lang=eng")
+# amy.photo.attach(io: file, filename: "amywinehouse.jpg", content_type: "image/jpeg")
 
 
 # rental1 = Rental.create!(instrument: instrument8, start_date: "2022-11-22", end_date: "2022-11-24", total_price:600, acceptation:"en-attente", message_to_owner:"bonjour merci d'accepter ma demande de reservation, cordialement Sylvain")
