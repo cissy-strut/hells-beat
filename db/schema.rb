@@ -88,7 +88,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_101853) do
     t.string "bio"
     t.integer "experience"
     t.string "style"
-    t.string "profile_pic"
     t.date "birth_date"
     t.string "gender"
     t.index ["email"], name: "index_users_on_email", unique: true
