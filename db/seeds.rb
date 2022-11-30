@@ -7,7 +7,7 @@ Chatroom.destroy_all
 
 puts "Database cleaned"
 
-strut33 = User.create!(pseudo: 'strut33', instrument: 'platines', city: 'Nantes', country: 'France', email: 'strut33@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment sympa", experience: 17, style: "Rock", birth_date: "1980-9-24", gender: "Homme" )
+strut33 = User.create!(pseudo: 'strut33', instrument: 'platines', city: 'Nantes', country: 'France', email: 'strut33@gmail.com', password: 'x ', bio: "la musique c'est vraiment sympa", experience: 17, style: "Rock", birth_date: "1980-9-24", gender: "Homme" )
 
 jimi = User.create!(pseudo: 'jimi', instrument: 'guitare', city: 'Nantes', country: 'France', email: 'jimi.hendrix@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment bien", experience: 2, style: "classique", birth_date: "2000-10-03", gender: "Homme" )
 
