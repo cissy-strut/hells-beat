@@ -1,6 +1,6 @@
 class MatchingsController < ApplicationController
   def index
-    @matchings = current_user.matchings
+    @matchings = Matching.all
   end
 
   def refuse

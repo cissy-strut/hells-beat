@@ -1,45 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Strut Band</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel='stylesheet' type='text/css' media='screen' href='css/styleprofil.css'>
-</head>
-<body>
-  <main>
-    <div class="banner">
-      <a href="#"> <img src="images/btn-weel.png" alt="reglage bouton"> </a>
-      <h1> STRUT <h1>
-      <a href="#"> <img src="images/btn-message.png" alt="message bouton"> </a>
-    </div>
-
-    <% @matchings.each do |matching| %>
-      <%= link_to matchings_path(matching) do %> %>
-        <div class="profiles">
-          <div class="profile">
-            <div class="profile__image" style="background-image: url('images/3.jpg');"></div>
-            <div class="profile__infos">
-              <div class="profile__name"><%= image_tag(matching.user.profile_pic)%><span class="profile__age"> <%= 12 %> </span></div>
-              <div class="profile__description"><%= matching.user.bio %></div>
-            </div>
-          </div>
-      <% end %>
-    <% end %>
-
-    <div class="bottombar">
-      <div class="bottombar__button">
-        <img src="images/icon-next.svg">
+<% @matchings.each do |matching| %>
+  <%= link_to matching_path(matching) do %>
+    <div class="profiles">
+      <div class="profile">
+        <div class="profile__image" style="background_image:  url(<%= cl_image_path('matching.user.photo')%>); height: 200px; width: 200px"></div>
+        <div class="profile__infos">
+          <div class="profile__name"><span class="profile__age"> <%= matching.user.birth_date %> </span></div>
+  <% end %>
+          <div class="profile__description"><%= matching.user.bio %></div>
+        </div>
       </div>
-      <div class="bottombar__button">
-        <img src="images/icon-heart.svg">
-      </div>
-    </div>
-  </main>
-  <script src='js/hammer.min.js'></script>
-  <script src='js/main.js'></script>
-</body>
-</html>
+<% end %>
+
+<div class="bottombar">
+  <div class="bottombar__button">
+    <img src="images/icon-next.svg">
+  </div>
+  <div class="bottombar__button">
+    <img src="images/icon-heart.svg">
+  </div>
+</div>
+
+</main>
+<script src='js/hammer.min.js'></script>
+<script src='js/main.js'></script>
