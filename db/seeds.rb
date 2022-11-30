@@ -2,10 +2,10 @@ require "open-uri"
 
 puts "Cleaning up database..."
 
-User.destroy_all
 Message.destroy_all
-Matching.destroy_all
 Chatroom.destroy_all
+Matching.destroy_all
+User.destroy_all
 
 puts "Database cleaned"
 
