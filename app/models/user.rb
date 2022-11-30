@@ -4,7 +4,23 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  INSTRUMENTS = %w[guitare piano triangle voix platines]
+
   has_many :matchings
+  
   has_one_attached :photo
   
+
+
+  validates :pseudo, presence: true
+  validates :instrument, presence: true
+  validates :instrument, inclusion: { in: INSTRUMENTS, message: "%<value> is not a valid instrument" }
+  validates :city, presence: true
+  validates :country, presence: true
+  validates :bio, presence: true
+  validates :experience, presence: true
+  validates :style, presence: true
+  validates :birth_date, presence: true
+  validates :gender, presence: true
+
 end
