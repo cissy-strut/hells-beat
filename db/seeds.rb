@@ -9,10 +9,6 @@ Chatroom.destroy_all
 
 puts "Database cleaned"
 
-david = User.create!(nickname: 'david', instrument: 'platines', city: 'Paris', country: 'France', email: 'david@gmail.com', password: 'jimi44', bio: "la musique c'est vraiment sympa", experience: 17, style: "Rock", birth_date: "1980-9-24", gender: "Homme" )
-file = URI.open("https://images.rtl.fr/\~c/2000v2000/funradio/www/1533519-david-guetta-lors-de-la-64e-ceremonie-des-grammy-awards.jpg")
-david.photo.attach(io: file, filename: "davidguetta.jpg", content_type: "image/jpg")
-david.save
 
 jimi = User.create!(nickname: 'jimi', instrument: 'guitare', city: 'Nantes', country: 'France', email: 'jimi.hendrix@gmail.com', password: 'jimi44', bio: "la musique c'est vraiment bien", experience: 2, style: "classique", birth_date: "2000-10-03", gender: "Homme" )
 file = URI.open("https://cdns-images.dzcdn.net/images/artist/2deec542fc75d5691434c407ee077ff7/500x500.jpg")
