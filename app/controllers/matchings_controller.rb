@@ -9,5 +9,6 @@ class MatchingsController < ApplicationController
   end
 
   def show
+    @matching = Matching.find(params[:id])
   end
 end
