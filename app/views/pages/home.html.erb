@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+  <div class="content">
+  <div class="img">
+    <%= image_tag "logo_index.png", alt: "le logo" %>
+  </div>
+
+  <div class="content">
+    <p> En cliquant sur connexion vous acceptez <%= link_to "nos conditions d’utilisateurs", "#" , class: "underline" %>. Consultez notre politique de confidencialité et <%= link_to "notre Politique relative aux cookies", "#" , class: "underline" %> pour savoir comment nous utilisons vos données </p>
+  </div>
+
+  <div class="boutons">
+    <%= link_to "Se connecter", matchings_path , class: "mybtn" %>
+    <%= link_to "S'inscrire", new_user_session_path, class: "mybtn" %>
+  </div>
+</div>
+
+
