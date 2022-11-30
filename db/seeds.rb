@@ -7,20 +7,20 @@ Chatroom.destroy_all
 
 puts "Database cleaned"
 
-strut33 = User.create!(nickname: 'strut33', instrument: 'platines', city: 'Nantes', country: 'France', email: 'strut33@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment sympa", experience: 17, style: "Rock", birth_date: "1980-9-24", gender: "Homme" )
+strut33 = User.create!(pseudo: 'strut33', instrument: 'platines', city: 'Nantes', country: 'France', email: 'strut33@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment sympa", experience: 17, style: "Rock", birth_date: "1980-9-24", gender: "Homme" )
 
-jimi = User.create!(nickname: 'jimi', instrument: 'guitare', city: 'Nantes', country: 'France', email: 'jimi.hendrix@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment bien", experience: 2, style: "classique", birth_date: "2000-10-03", gender: "Homme" )
+jimi = User.create!(pseudo: 'jimi', instrument: 'guitare', city: 'Nantes', country: 'France', email: 'jimi.hendrix@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment bien", experience: 2, style: "classique", birth_date: "2000-10-03", gender: "Homme" )
 
-eric = User.create!(nickname: 'eric', instrument: 'piano', city: 'Bordeaux', country: 'France', email: 'eric.clapton@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment trop cool", experience: 20, style: "rock", birth_date: "2000-10-04", gender: "Homme" )
+eric = User.create!(pseudo: 'eric', instrument: 'piano', city: 'Bordeaux', country: 'France', email: 'eric.clapton@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment trop cool", experience: 20, style: "rock", birth_date: "2000-10-04", gender: "Homme" )
 
-kurt = User.create!(nickname: 'kurt', instrument: 'triangle', city: 'Toulouse', country: 'France', email: 'kurt.cobain@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment incroyable", experience: 27, style: "rock", birth_date: "2000-10-05", gender: "Homme" )
+kurt = User.create!(pseudo: 'kurt', instrument: 'triangle', city: 'Toulouse', country: 'France', email: 'kurt.cobain@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment incroyable", experience: 27, style: "rock", birth_date: "2000-10-05", gender: "Homme" )
 
-bob = User.create!(nickname: 'bob', instrument: 'guitare', city: 'Rennes', country: 'France', email: 'bob.marley@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment génial", experience: 36, style:"reggae", birth_date: "2000-10-06", gender: "Homme" )
+bob = User.create!(pseudo: 'bob', instrument: 'guitare', city: 'Rennes', country: 'France', email: 'bob.marley@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment génial", experience: 36, style:"reggae", birth_date: "2000-10-06", gender: "Homme" )
 # file = URI.open("https://www.telerama.fr/sites/tr_master/files/styles/simplecrop1000/public/grk_ga564607_002_0.jpg?itok=eRTnsP6j")
 # bob.photo.attach(io: file, filename: "bobmarleye.jpg", content_type: "image/jpeg")
 require "open-uri"
 
-amy = User.create!(nickname: 'amy', instrument: 'voix', city: 'Montpellier', country: 'France', email: 'amy.winehouse@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment fantastique", experience: 27, style:"soul", birth_date: "2000-10-07", gender: "Femme" )
+amy = User.create!(pseudo: 'amy', instrument: 'voix', city: 'Montpellier', country: 'France', email: 'amy.winehouse@gmail.com', password: 'jimmy44', bio: "la musique c'est vraiment fantastique", experience: 27, style:"soul", birth_date: "2000-10-07", gender: "Femme" )
 # amy = User.new(title: "Amy", body: "Amy winehouse")
 # file = URI.open("https://media.vogue.fr/photos/5c360db03b3a64c63eb378b5/master/w_1600%2Cc_limit/winehouse_3797.jpeg?lang=eng")
 # amy.photo.attach(io: file, filename: "amywinehouse.jpg", content_type: "image/jpeg")
