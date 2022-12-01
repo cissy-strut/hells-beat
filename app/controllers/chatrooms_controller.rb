@@ -3,4 +3,10 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
   end
+
+  private
+
+  def chatroom_params
+    params.require(:chatroom).permit(:id)
+  end
 end

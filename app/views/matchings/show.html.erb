@@ -3,19 +3,22 @@
 </div>
 
 <div class="infoshow">
-  <h1><strong><%=@matching.second_associated_user.nickname.capitalize %></strong>,
-      <%= @matching.second_associated_user.instrument.capitalize %>
-      <%= @matching.second_associated_user.age %> ans
+  <h1>
+    <strong><%=@matching.second_associated_user.nickname.capitalize %></strong>,
+    <%= @matching.second_associated_user.instrument.capitalize %>
+    <%= @matching.second_associated_user.age %> ans
   </h1>
 
   <%= @matching.second_associated_user.city.capitalize %>,
-  <strong>
-    <%= @matching.second_associated_user.country.upcase %>
-  </strong>
+  <strong><%= @matching.second_associated_user.country.upcase %></strong>
 </div>
 
 <br>
 
 <div class="biocontainer">
   <p><%= @matching.second_associated_user.bio.capitalize %>.</p>
+</div>
+
+<div class="btn btn-primary">
+  <%=  link_to "chatrooms", "/chatrooms/show" %>
 </div>
