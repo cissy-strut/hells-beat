@@ -1,17 +1,27 @@
-<div class="show">
-<%=@matching.user.profile_pic%>
-  <h1><strong><%=@matching.user.nickname.upcase %></strong>, <%= @matching.user.instrument %></h1>
-<div class="containershow"></div>
-
-  <h5><%= @matching.user.city %>, <%= @matching.user.country.upcase %></h5>
-
-  <ul>
-  <li><%= @matching.user.gender %></li>
-  <li><%= @matching.user.birth_date %></li>
-  <li><%= @matching.user.style %></li>
-  <li>expérience : <%= @matching.user.experience %> ans</li>
-  </ul>
-  <br></br>
-    <p><%= @matching.user.bio.capitalize %>.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Page d'acceuil</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
+  <link href=
+</head>
+<body>
+  <div class="show-class">
+  <%=@matching.user.profile_pic%>
+    <h1><strong><%=@matching.user.nickname.upcase %></strong>, <%= @matching.user.instrument %></h1>
+      <div class="container-show"></div>
+        <h5><%= @matching.user.city %>, <%= @matching.user.country.upcase %></h5>
+        <ul>
+        <li><%= @matching.user.gender %></li>
+        <li><%= @matching.user.birth_date %></li>
+        <li><%= @matching.user.style %></li>
+        <li>expérience : <%= @matching.user.experience %> ans</li>
+        </ul>
+        <p><%= @matching.user.bio.capitalize %>.</p>
+      </div>
 </div>
-</div>
+</body>
