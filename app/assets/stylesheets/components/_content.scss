@@ -1,15 +1,14 @@
 .content {
-  background-color: #11273D;
   margin: auto;
   text-align: center;
   width: 100%;
   padding-top: 100px;
-  color: white;
+  color: #11273D;
 }
 
 img{
   width: 100px;
-  height: 100px;
+  height: 100%;
   text-align: center;
 }
 
@@ -20,16 +19,16 @@ img{
   background-color: rgba(255, 255, 255, .2);
   border-style: solid;
   border-radius: 20px;
-  border-color: white;
+  border-color: #11273D;
   width: 50%;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  color: white;
+  color: #11273D;
 }
 
 .underline {
-  color: white;
+  color: #11273D;
 }
 
 .boutons {
@@ -37,5 +36,5 @@ img{
 }
 
 .show {
-  color: white;
+  color: #11273D;
 }

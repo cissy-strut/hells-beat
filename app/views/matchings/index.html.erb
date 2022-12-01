@@ -1,30 +1,36 @@
-<% @matchings.each do |matching| %>
-  <%= link_to matching_path(matching) do %>
-    <div class="profiles">
-      <div class="profile">
-        <div class="profile__image"
-          style="background-image:  url('<%= cl_image_path User.find(matching.user_two_id).photo.key%>')"
-        >
-          <div class="profile__infos">
-            <div class="profile__name"><span class="profile__age"> <%= matching.user.nickname %> <%= matching.user.birth_date %> </span></div>
-    <% end %>
-            <div class="profile__description"><%= matching.user.bio %></div>
-          </div>
+<div class="bodyindex">
+<div class="banner">
+  <div class="small"><a href="#"> <%= image_tag "reglage.png", alt: "le logo" %></a></div>
+  <div class="biglogo"><a href="#">  <%= image_tag "logo.png", alt: "le logo" %> </a></div>
+  <div class="small"><a href="#"> <%= image_tag "message.png", alt: "le logo" %></a></div>
+</div>
 
-          <div class="bottombar">
-            <div class="bottombar__button">
-              <img src="images/icon-next.svg">
+<div class="mycard">
+      <div class="profiles">
+  <% @matchings.each do |matching| %>
+        <div class="profile">
+          <%= link_to matching_path(matching) do %>
+            <div class="profile__image" style="background-image:  url('<%= cl_image_path User.find(matching.user_two_id).photo.key%>')">
+              <div class="profile__infos">
+                <div class="profile__name"><span class="profile__age"> <strong><%= matching.second_associated_user.nickname.upcase %></strong> , <%= matching.second_associated_user.instrument %> </span>
+                </div>
+              </div>
             </div>
-            <div class="bottombar__button">
-              <img src="images/icon-heart.svg">
-            </div>
+          <% end %>
+        </div>
+
+        <div class="bottombar">
+          <div class="bottombar__button">
+            <a href="#"> <%= image_tag "croix.png", alt: "le logo" %></a>
+          </div>
+          <div class="bottombar__button">
+            <a href="#"> <%= image_tag "coeur.png", alt: "le logo" %></a>
           </div>
         </div>
-      </div>
-<% end %>
+  <% end %>
+    </div>
+</div>
+</div>
 
-
-
-</main>
-<!--<script src='../../javascript/hammer.min.js'></script>
-<script src='../../javascript/main.js'></script>-->
+<!-- <script src='../../javascript/hammer.min.js'></script>
+<script src='../../javascript/main.js'></script> -->
