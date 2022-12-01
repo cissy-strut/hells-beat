@@ -34,9 +34,28 @@
   align-items: center;
   gap:24px;
   position: absolute;
-  top: 120%;
+  top: 135%;
   left: 50%;
   transform: translate(-50%,-50%);
+
+}
+
+.bottombar2 {
+  margin-top:24px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:24px;
+  position: absolute;
+  top: 165%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.bottombar2 img{
+  width: 50px;
+  height: 50px;
+  margin: 20px;
 
 }
 
@@ -50,6 +69,11 @@
   padding: 0 40px;
   margin-bottom: 50px;
  }
+
+.textop {
+  color: rgba(229, 229, 229, 0.728);
+  font-size: 15px;
+}
 
  .profiles {
   width:100%;
@@ -75,9 +99,26 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+.profile2 {
+  position: absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(57, 57, 57, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor:pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 .profiles::before {
   content:'Plus personne à proximité...';
-  color:white;
+  color:black;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +126,7 @@
 }
 
 .profile__image {
-  height: 450px;
+  height: 550px;
   padding-bottom:100%;
   background-size: cover;
   background-position: center center;
@@ -125,21 +166,24 @@
   transition:var(--transition-time);
 }
 .profile--matching::after, .profile--nexting::after {
-  content:'MATCH';
+  content:'OUI';
   font-weight: bold;
   font-size:28px;
   padding:8px 12px;
-  border:solid 2px var(--green);
-  color:var(--green);
+  border:solid 2px rgb(91, 238, 91);
+  color:rgb(91, 238, 91);
   background:var(--black-transparent);
   position:absolute;
   top:24px;
-  right:12px;
+  right:210px;
   border-radius: 4px;
-  transform:rotate(24deg);
+  transform:rotate(-24deg);
 }
 .profile--nexting::after {
-  content:'NEXT';
-  border:solid 2px var(--red);
-  color:var(--red);
+  content:'NON';
+  border:solid 2px red;
+  color:red;
+  top: 24px;
+  right:12px;
+  transform:rotate(24deg)
 }

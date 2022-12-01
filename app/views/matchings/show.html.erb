@@ -1,23 +1,32 @@
-<div class="imageshow">
-  <div class="backbtn">
-    <a href="/matchings">back</a>
-  </div>
-  <%=cl_image_tag @matching.second_associated_user.photo.key%>
-</div>
 
-<div class="infoshow">
-  <h1>
-    <strong><%=@matching.second_associated_user.nickname.capitalize %></strong>,
-    <%= @matching.second_associated_user.instrument.capitalize %>
-    <%= @matching.second_associated_user.age %> ans
-  </h1>
 
-  <%= @matching.second_associated_user.city.capitalize %>,
-  <strong><%= @matching.second_associated_user.country.upcase %></strong>
-</div>
 
-<br>
+      <div class="profiles">
+        <div class="profile2">
+          <div class="profile__image" style="background-image:  url('<%=cl_image_path @matching.second_associated_user.photo.key%>')">
+                <div class="backbtn">
+                  <%= link_to matchings_path do %>
+                  <%= image_tag "back.png", alt: "back" %>
+                  <% end %>
+                </div>
+              <div class="profile__infos">
+                <div class="profile__name"><span class="profile__age"> <strong><%= @matching.second_associated_user.nickname.upcase %></strong> , <%= @matching.second_associated_user.age %> ans <%= @matching.second_associated_user.instrument %> </span>
+                <p class="textop">  <%= @matching.second_associated_user.city %> </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="biocontainer">
+          <p><%= @matching.second_associated_user.bio.capitalize %>.</p>
+        </div>
 
-<div class="biocontainer">
-  <p><%= @matching.second_associated_user.bio.capitalize %>.</p>
-</div>
+
+        <div class="bottombar2">
+          <div class="bottombar__button">
+            <a href="#"> <%= image_tag "croix.png", alt: "le logo" %></a>
+          </div>
+          <div class="bottombar__button">
+            <a href="#"> <%= image_tag "coeur.png", alt: "le logo" %></a>
+          </div>
+        </div>
+    </div>
