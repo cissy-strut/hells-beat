@@ -1,2 +1,30 @@
-<h1>Matchings#index</h1>
-<p>Find me in app/views/matchings/index.html.erb</p>
+<% @matchings.each do |matching| %>
+  <%= link_to matching_path(matching) do %>
+    <div class="profiles">
+      <div class="profile">
+        <div class="profile__image"
+          style="background-image:  url('<%= cl_image_path User.find(matching.user_two_id).photo.key%>')"
+        >
+          <div class="profile__infos">
+            <div class="profile__name"><span class="profile__age"> <%= matching.user.nickname %> <%= matching.user.birth_date %> </span></div>
+    <% end %>
+            <div class="profile__description"><%= matching.user.bio %></div>
+          </div>
+
+          <div class="bottombar">
+            <div class="bottombar__button">
+              <img src="images/icon-next.svg">
+            </div>
+            <div class="bottombar__button">
+              <img src="images/icon-heart.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+<% end %>
+
+
+
+</main>
+<!--<script src='../../javascript/hammer.min.js'></script>
+<script src='../../javascript/main.js'></script>-->

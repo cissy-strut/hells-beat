@@ -10,8 +10,6 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
-
-
   validates :nickname, presence: true
   validates :instrument, presence: true
   validates :instrument, inclusion: { in: INSTRUMENTS, message: "%<value> is not a valid instrument" }
