@@ -9,6 +9,6 @@ class Matching < ApplicationRecord
   end
 
   def first_associated_user
-    Self.user
+    self.user
   end
 end
