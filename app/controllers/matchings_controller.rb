@@ -12,4 +12,10 @@ class MatchingsController < ApplicationController
   def show
     @matching = Matching.find(params[:id])
   end
+
+  private
+
+  def matching_params
+    params.require(:matching).permit(:id)
+  end
 end

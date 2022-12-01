@@ -1,17 +1,21 @@
-<div class="show">
-<%=@matching.user.profile_pic%>
-  <h1><strong><%=@matching.user.nickname.upcase %></strong>, <%= @matching.user.instrument %></h1>
-<div class="containershow"></div>
-
-  <h5><%= @matching.user.city %>, <%= @matching.user.country.upcase %></h5>
-
-  <ul>
-  <li><%= @matching.user.gender %></li>
-  <li><%= @matching.user.birth_date %></li>
-  <li><%= @matching.user.style %></li>
-  <li>expérience : <%= @matching.user.experience %> ans</li>
-  </ul>
-  <br></br>
-    <p><%= @matching.user.bio.capitalize %>.</p>
+<div class="imageshow">
+  <%=cl_image_tag @matching.second_associated_user.photo.key%>
 </div>
+
+<div class="infoshow">
+  <h1><strong><%=@matching.second_associated_user.nickname.capitalize %></strong>,
+      <%= @matching.second_associated_user.instrument.capitalize %>
+      <%= @matching.second_associated_user.age %> ans
+  </h1>
+
+  <%= @matching.second_associated_user.city.capitalize %>,
+  <strong>
+    <%= @matching.second_associated_user.country.upcase %>
+  </strong>
+</div>
+
+<br>
+
+<div class="biocontainer">
+  <p><%= @matching.second_associated_user.bio.capitalize %>.</p>
 </div>

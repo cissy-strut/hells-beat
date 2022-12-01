@@ -21,4 +21,7 @@ class User < ApplicationRecord
   validates :birth_date, presence: true
   validates :gender, presence: true
 
+  def age
+    (Date.today.strftime('%Y%m%d').to_i - birth_date.strftime('%Y%m%d').to_i) / 10_000
+  end
 end
