@@ -7,11 +7,10 @@
   <!-- We need this line below for responsiveness! -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
-  <link href=
 </head>
 <body>
   <div class="show-class">
-  <%=@matching.user.profile_pic%>
+  <%=@matching.user.photo.key%>
     <h1><strong><%=@matching.user.nickname.upcase %></strong>, <%= @matching.user.instrument %></h1>
       <div class="container-show"></div>
         <h5><%= @matching.user.city %>, <%= @matching.user.country.upcase %></h5>
