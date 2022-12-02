@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  INSTRUMENTS = %w[guitare piano triangle voix platines]
-
+  INSTRUMENTS = %w[guitare piano basse voix platines batterie]
+  EXPERIENCES = %w[debutant confirmé expert]
   has_many :matchings
 
   has_one_attached :photo
@@ -14,12 +14,11 @@ class User < ApplicationRecord
   validates :instrument, presence: true
   validates :instrument, inclusion: { in: INSTRUMENTS, message: "%<value> is not a valid instrument" }
   validates :city, presence: true
-  validates :country, presence: true
   validates :bio, presence: true
   validates :experience, presence: true
+  validates :experience, inclusion: { in: EXPERIENCES, message: "%<value> debutant, confirmé ou expert" }
   validates :style, presence: true
   validates :birth_date, presence: true
-  validates :gender, presence: true
 
   def age
     (Date.today.strftime('%Y%m%d').to_i - birth_date.strftime('%Y%m%d').to_i) / 10_000
