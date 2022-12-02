@@ -45,5 +45,13 @@ Matching1 = Matching.create!(user: david, user_two_id: jimi.id, user_one_status:
 Matching2 = Matching.create!(user: david, user_two_id: eric.id, user_one_status: "pendind", user_two_status: "pending")
 Matching3 = Matching.create!(user: david, user_two_id: kurt.id, user_one_status: "pendind", user_two_status: "pending")
 Matching4 = Matching.create!(user: david, user_two_id: bob.id, user_one_status: "pendind", user_two_status: "pending")
+Matching5 = Matching.create!(user: eric, user_two_id: jimi.id, user_one_status: "pendind", user_two_status: "pending")
+Matching6 = Matching.create!(user: eric, user_two_id: amy.id, user_one_status: "pendind", user_two_status: "pending")
+Matching7 = Matching.create!(user: eric, user_two_id: kurt.id, user_one_status: "pendind", user_two_status: "pending")
+Matching8 = Matching.create!(user: eric, user_two_id: bob.id, user_one_status: "pendind", user_two_status: "pending")
+Matching9 = Matching.create!(user: jimi, user_two_id: eric.id, user_one_status: "pendind", user_two_status: "pending")
+Matching10 = Matching.create!(user: jimi, user_two_id: amy.id, user_one_status: "pendind", user_two_status: "pending")
+Matching11 = Matching.create!(user: jimi, user_two_id: kurt.id, user_one_status: "pendind", user_two_status: "pending")
+Matching12 = Matching.create!(user: jimi, user_two_id: bob.id, user_one_status: "pendind", user_two_status: "pending")
 
 puts "Matching created"
