@@ -12,7 +12,7 @@ img{
   text-align: center;
 }
 
-.mybtn {
+.mybtn33 {
   margin-top: 30px;
   display: inline-block;
   text-decoration: none;
@@ -22,10 +22,45 @@ img{
   border-color: #11273D;
   width: 50%;
   text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #11273D;
+  margin-bottom: 30px;
+
+}
+
+.mybtn3 {
+  margin-top: 30px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #11273D;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #ffffff;
+  width: 50%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+
+}
+
+.mybtn {
+  margin-top: 30px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, .5);
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #11273D;
+  width: 50%;
+  text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
   color: #11273D;
 }
+
+
 
 .underline {
   color: #11273D;

@@ -5,6 +5,10 @@
     <%= image_tag "logo.png", alt: "le logo" %>
   </div>
 
+    <div class="content">
+    <p> Trouver des musiciens à coté de chez vous !!</p>
+  </div>
+
   <div class="content">
     <p> En cliquant sur connexion vous acceptez <%= link_to "nos conditions d’utilisateurs", "#" , class: "underline" %>. Consultez notre politique de confidencialité et <%= link_to "notre Politique relative aux cookies", "#" , class: "underline" %> pour savoir comment nous utilisons vos données </p>
   </div>
@@ -12,6 +16,5 @@
   <div class="boutons">
     <%= link_to "Se connecter", matchings_path , class: "mybtn" %>
     <%= link_to "S'inscrire", new_user_session_path, class: "mybtn" %>
-    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
   </div>
 </div>
