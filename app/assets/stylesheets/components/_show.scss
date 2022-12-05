@@ -43,6 +43,20 @@ ul {
 
 }
 
+.backbtn333  {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:10px;
+  left:10px;
+}
+.backbtn333  img{
+  width: 40px;
+  height: auto;
+  position: absolute;
+
+}
+
 .backbtn33  {
   width: 20px;
   height: 20px;
@@ -55,4 +69,22 @@ ul {
   height: auto;
   position: absolute;
 
+}
+
+.montitre {
+  position: absolute;
+  top: 15px;
+  left:100px;
+}
+
+.blockdetext {
+  background-color: rgb(255, 255, 255);
+  margin: 10px 30px 10px 0px;
+}
+
+.listprofil a{
+ color: #11273d;
+ text-decoration: none;
+ font-size: 12px;
+ font-family: Arial, Helvetica, sans-serif;
 }

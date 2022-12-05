@@ -209,3 +209,18 @@ margin-bottom: 20px;
 .montitre {
   text-align: center;
 }
+
+
+.listprofil img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  margin: 15px;
+  text-align: justify;
+  align-items: right;
+}
+
+.listprofil {
+  margin-top: 100px;
+}
