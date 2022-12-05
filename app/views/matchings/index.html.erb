@@ -22,10 +22,14 @@
 
         <div class="bottombar">
           <div class="bottombar__button">
-            <a href="#"> <%= image_tag "croix.png", alt: "le logo" %></a>
+            <%= button_to refuse_matching_path(matching), method: :patch, data: {turbo: false} do %>
+              <%= image_tag "croix.png", alt: "Le logo" %>
+            <% end %>
           </div>
           <div class="bottombar__button">
-            <a href="#"> <%= image_tag "coeur.png", alt: "le logo" %></a>
+            <%= button_to accept_matching_path(matching), method: :patch, data: {turbo: false} do %>
+              <%= image_tag "coeur.png", alt: "Le logo" %>
+            <% end %>
           </div>
         </div>
   <% end %>
