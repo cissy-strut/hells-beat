@@ -41,8 +41,8 @@ amy.save
 
 puts "User created"
 
-Matching1 = Matching.create!(user: david, user_two_id: jimi.id, user_one_status: "pending", user_two_status: "pending")
-Matching2 = Matching.create!(user: david, user_two_id: eric.id, user_one_status: "pending", user_two_status: "pending")
+Matching1 = Matching.create!(user: david, user_two_id: jimi.id, user_one_status: "accept", user_two_status: "accept")
+Matching2 = Matching.create!(user: kurt, user_two_id: david.id, user_one_status: "accept", user_two_status: "accept")
 Matching3 = Matching.create!(user: david, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
 Matching4 = Matching.create!(user: david, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
 Matching5 = Matching.create!(user: eric, user_two_id: jimi.id, user_one_status: "pending", user_two_status: "pending")
@@ -54,4 +54,3 @@ Matching10 = Matching.create!(user: jimi, user_two_id: amy.id, user_one_status: 
 Matching11 = Matching.create!(user: jimi, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
 Matching12 = Matching.create!(user: jimi, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
 puts "Matching created"
-
