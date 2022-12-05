@@ -1,10 +1,7 @@
 class ChatroomsController < ApplicationController
   def index
-    @matchings = Matching.all
-    # @chatrooms = (current_user.chatrooms.where(user_one_status: "accept") +
-    #              Chatroom.where(user_two_id: current_user.id).where(@matching.user_two_status: "accept")) &&
-    #              (current_user.chatrooms.where(user_one_status: "accept") +
-    #              Chatroom.where(user_two_status: "accept"))
+    @matchings_with_user_ref = current_user.matchings.where(user_one_status: "accept", user_two_status: "accept")
+    @matchings_with_other_user = Matching.where(user_two_id: current_user.id, user_one_status: "accept", user_two_status: "accept")
   end
 
   def show

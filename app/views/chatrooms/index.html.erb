@@ -1,8 +1,8 @@
 <div class="mycard">
-<% @matchings.each do |matching| %>
-  <div>
-    <%= cl_image_path matching.second_associated_user.photo.key %>
-    <%= matching.second_associated_user.nickname.upcase %>
-  </div>
-<% end %>
+  <% @matchings.each do |matching| %>
+    <div>
+      <%= cl_image_tag User.find(matching.user_two_id).photo.key%>
+      <%= matching.second_associated_user.nickname.upcase %>
+    </div>
+  <% end %>
 </div>
