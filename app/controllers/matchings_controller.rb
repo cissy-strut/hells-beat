@@ -3,10 +3,8 @@ class MatchingsController < ApplicationController
     @matchings = Matching.all
   end
 
-  def refuse
-  end
-
-  def accept
+  def status(matching)
+    
   end
 
   def show

@@ -25,7 +25,7 @@ img{
   padding-top: 5px;
   padding-bottom: 5px;
   color: #11273D;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
 }
 
@@ -68,8 +68,16 @@ img{
 
 .boutons {
   margin-top: 40px;
+  padding: 70px;
 }
 
 .show {
   color: #11273D;
+}
+
+.backgroundhome {
+  background: rgba(0, 0, 0, 0.5) asset-url("bp.png");
+  background-position: center;
+  background-blend-mode: darken;
+  height: 100%;
 }
