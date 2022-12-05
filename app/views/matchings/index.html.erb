@@ -2,7 +2,11 @@
 <div class="banner">
   <div class="small"><a href="users/edit"> <%= image_tag "reglage.png", alt: "le logo" %></a></div>
   <div class="biglogo"><a href="/">  <%= image_tag "logo.png", alt: "le logo" %> </a></div>
-  <div class="small"><a href="#"> <%= image_tag "message.png", alt: "le logo" %></a></div>
+  <div class="small">
+    <%= link_to chatrooms_path do %>
+      <%= image_tag "message.png", alt: "le logo" %>
+    <% end %>
+  </div>
 
 </div>
 
