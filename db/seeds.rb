@@ -54,3 +54,4 @@ Matching10 = Matching.create!(user: jimi, user_two_id: amy.id, user_one_status: 
 Matching11 = Matching.create!(user: jimi, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
 Matching12 = Matching.create!(user: jimi, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
 puts "Matching created"
+
