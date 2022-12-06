@@ -1,4 +1,5 @@
 <div class="mycard">
+<div class="monh1"> <p>PROFIL</p> </div>
   <div class="backbtn33">
     <%= link_to matchings_path do %>
     <%= image_tag "backblack.png", alt: "back" %>
@@ -6,13 +7,15 @@
   </div>
   <div class="photoedit"> <%= cl_image_tag current_user.photo.key%> </div>
 <div class="montitre">
-<h2> Profile <%= current_user.nickname.capitalize %></h2>
+<h2> <%= current_user.nickname.upcase %></h2>
+<h4> <%= current_user.instrument.capitalize %></h4>
 </div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
 
     <%= f.input :photo,
+                html5: true,
                 as: :file,
                 required: false %>
   <div class="form-inputs">
@@ -37,6 +40,7 @@
                 input_html: { autocomplete: "instrument" }%>
 
     <%= f.input :bio,
+                html5: true,
                 required: false,
                 input_html: { autocomplete: "bio" }%>
 

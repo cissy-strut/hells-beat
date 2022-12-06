@@ -1,8 +1,12 @@
+   <div class="backbtn333">
+    <%= link_to chatrooms_path do %>
+    <%= image_tag "backblack.png", alt: "back" %>
+    <% end %>
+    </div>
 <div class="container chatroom"
   data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
->
-  <h1>#<%= @chatroom.name %></h1>
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+
 
   <div class="messages" data-chatroom-subscription-target="messages">
 
