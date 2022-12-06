@@ -1,4 +1,24 @@
+  <div class="retour1">
+   <%= image_tag "gauche.png", alt: "back" %>
+  </div>
+  <div class="retour2">
+   <%= image_tag "gauche.png", alt: "back" %>
+  </div>
+  <div class="retour3">
+   <%= image_tag "gauche.png", alt: "back" %>
+  </div>
+  <div class="retour4">
+   <%= image_tag "droite.png", alt: "back" %>
+  </div>
+  <div class="retour5">
+   <%= image_tag "droite.png", alt: "back" %>
+  </div>
+  <div class="retour6">
+   <%= image_tag "droite.png", alt: "back" %>
+  </div>
+
 <div class="mycard">
+<div class="monh1"> <p>PROFIL</p> </div>
   <div class="backbtn33">
     <%= link_to matchings_path do %>
     <%= image_tag "backblack.png", alt: "back" %>
@@ -6,13 +26,15 @@
   </div>
   <div class="photoedit"> <%= cl_image_tag current_user.photo.key%> </div>
 <div class="montitre">
-<h2> Profile <%= current_user.nickname.capitalize %></h2>
+<h2> <%= current_user.nickname.upcase %></h2>
+<h4> <%= current_user.instrument.capitalize %></h4>
 </div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
 
     <%= f.input :photo,
+                html5: true,
                 as: :file,
                 required: false %>
   <div class="form-inputs">
@@ -27,26 +49,39 @@
                 required: false,
                 input_html: { autocomplete: "nickname" }%>
 
+    <%= f.input :instrument,
+                as: :radio_buttons,
+                collection: User::INSTRUMENTS,
+                required: false,
+                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper',
+                input_html: { class: "tag-instrument" }%>
+
     <%= f.input :city,
                 required: false,
                 input_html: { autocomplete: "city" }%>
 
-
-    <%= f.input :instrument,
+    <%= f.input :experience,
+                as: :radio_buttons,
+                collection: User::EXPERIENCES,
                 required: false,
-                input_html: { autocomplete: "instrument" }%>
+                                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper2',
+                input_html: { class: "tag-experience" }%>
 
     <%= f.input :bio,
+                html5: true,
+                :as => :text,
                 required: false,
-                input_html: { autocomplete: "bio" }%>
-
-    <%= f.input :experience,
-                required: false,
-                input_html: { autocomplete: "experience" }%>
+                input_html: { :rows => 7 , autocomplete: "bio" }%>
 
     <%= f.input :style,
+                as: :radio_buttons,
+                collection: User::STYLES,
                 required: false,
-                input_html: { autocomplete: "style" }%>
+                                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper',
+                input_html: { class: "tag-style" }%>
 
     <%= f.input :birth_date,
                 html5: true,
@@ -66,18 +101,10 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
   </div>
-
-  <div class="mybtn33">
-    <%= f.button :submit, "Mettre à jour" %>
-  </div>
+<div class="mesboutons">
+ <%= f.button :submit, "Mettre à jour", class: "mybtn4" %>
 <% end %>
-
-<h4>Supprimer mon compte:</h4>
-
-<div class="d-flex align-items-center">
-  <div>Déçu ?</div>
-  <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Vous etes sur ? vous allez nous manquer ..." }, method: :delete, class: "btn btn-link" %>
+<%= link_to "Se Déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "mybtn5" %>
+<%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Vous etes sur ? vous allez nous manquer ..." }, method: :delete, class: "mybtn6" %>
 </div>
-
-    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "mybtn3" %>
 </div>

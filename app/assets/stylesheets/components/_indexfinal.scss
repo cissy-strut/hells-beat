@@ -199,6 +199,7 @@
   object-fit: cover;
   width: 100px;
   height: 100px;
+  border: 2px solid black;
 }
 
 .photoedit {
@@ -208,6 +209,13 @@ margin-bottom: 20px;
 }
 .montitre {
   text-align: center;
+}
+.montitre h2{
+  font-size: 20px;
+}
+.montitre h4{
+  font-size: 16px;
+  color: #0e00008d;
 }
 
 .dialchat {
@@ -243,4 +251,308 @@ margin-bottom: 20px;
   margin-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
+}
+
+.monh1 p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 23px;
+  font-weight: bolder;
+}
+
+#user_photo {
+  border-radius: 20px;
+}
+#user_email {
+  border-radius: 20px;
+}
+#user_nickname {
+  border-radius: 20px;
+}
+#user_city {
+  border-radius: 20px;
+}
+#user_instrument {
+  border-radius: 20px;
+}
+#user_bio {
+  border-radius: 20px;
+}
+#user_experience {
+  border-radius: 20px;
+}
+#user_style {
+  border-radius: 20px;
+}
+#user_birth_date {
+  border-radius: 20px;
+}
+#user_password {
+  border-radius: 20px;
+}
+#user_password_confirmation {
+  border-radius: 20px;
+}
+#user_current_password {
+  border-radius: 20px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0E0000;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input#user_birth_date.form-select.mx-1.is-valid.date.optional {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0E0000;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 20 px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+
+
+input#user_photo.form-control.is-valid.file.optional{
+  display: none;
+}
+
+abbr {
+  display: none;
+}
+
+.form-control.is-valid {
+  border-color: #3b594c;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid[size="1"]:not([multiple]) {
+  padding-right: 4.125rem;
+  background-image: none;
+}
+
+label.form-label.file.optional{
+  background-image: asset-url("pictophoto.png");
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 0px;
+  border: 2px solid black;
+  position: absolute;
+  top:175px;
+  left:220px;
+  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+}
+
+.dialchat a{
+  color: #0E0000;
+  text-decoration: none;
+}
+
+.tag-style {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-style + label {
+  border: 1px solid #11273C;
+  border-radius: 20px;
+  background-color: #11273c0e;
+  color: #11273c !important;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90px;
+}
+
+.tag-style:checked + label {
+
+  color: #ffffff !important;
+  background-color: #11273c;
+  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+}
+
+.tag-instrument {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-instrument + label {
+  border: 1px solid #11273C;
+  border-radius: 20px;
+  background-color: #11273c0e;
+  color: #11273c !important;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 90px;
+}
+
+.tag-instrument:checked + label {
+
+  color: #ffffff !important;
+  background-color: #11273c;
+  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+}
+
+.form-control.is-valid:focus {
+  border-color: #11273c;
+  box-shadow: 0 0 0 0.25rem rgba(82, 151, 208, 0.25);
+}
+
+.category-wrapper {
+  display: flex;
+  overflow: scroll;
+}
+.category-wrapper2 {
+  display: flex;
+  overflow: scroll;
+}
+.tag-experience:checked + label {
+
+  color: #ffffff !important;
+  background-color: #11273c;
+  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+}
+.tag-experience + label {
+  border: 1px solid #11273C;
+  border-radius: 20px;
+  background-color: #11273c0e;
+  color: #11273c !important;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90px;
+}
+.tag-experience {
+  position: absolute;
+  transform: scale(0);
+}
+input#user_birth_date.form-select.mx-1.is-valid.date.optional {
+  border-color: #11273c;
+  box-shadow: 0 0 0 0.25rem rgba(82, 151, 208, 0.25);
+}
+
+.mesboutons {
+  display: flex;
+  overflow: scroll;
+}
+
+.mybtn4 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 30px;
+  color: rgb(0, 129, 15);
+  text-decoration: none;
+  border: 1px solid rgb(0, 151, 25);
+  text-align: center;
+  border-radius: 5px;
+}
+.mybtn5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 30px;
+  color: rgb(229, 126, 16);
+  text-decoration: none;
+  border: 1px solid rgb(223, 122, 21);
+  text-align: center;
+  border-radius: 5px;
+}
+.mybtn6 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  margin: 30px;
+  color: rgb(137, 12, 12);
+  text-decoration: none;
+  border: 1px solid rgb(255, 0, 0);
+  text-align: center;
+  border-radius: 5px;
+}
+
+ .retour1 img {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 545px;
+  left: 20px;
+
+}
+.retour2 img {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 1110px;
+  left: 20px;
+
+}
+
+.retour3 img {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 760px;
+  left: 20px;
+
+}
+.retour4 img {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 760px;
+  left: 355px;
+
+}
+.retour5 img {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 1110px;
+  left: 355px;
+
+}
+.retour6 img {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 545px;
+  left: 355px;
+
 }
