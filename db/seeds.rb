@@ -9,7 +9,7 @@ User.destroy_all
 
 puts "Database cleaned"
 
-david = User.create!(nickname: 'Etienne', instrument: 'basse', city: 'Nantes', email: 'etienne@gmail.com', password: 'jimi44', bio: "Je cherche désespérément des musiciens expérimentés en Rock'n'Roll pour buffer toute la nuit, je dispose d'un grand espace de jeu :feu:.", experience: "expert", style: "Rock'n'Roll", birth_date: "2000-10-03")
+david = User.create!(nickname: 'Sylvain', instrument: 'guitare', city: 'Nantes', email: 'spe@nge.fr', password: '6404perezM', bio: "Je cherche désespérément des musiciens expérimentés en Rock'n'Roll pour buffer toute la nuit, je dispose d'un grand espace de jeu :feu:.", experience: "expert", style: "Rock'n'Roll", birth_date: "1991-4-12")
 file = URI.open("https://images.rtl.fr/\~c/2000v2000/funradio/www/1533519-david-guetta-lors-de-la-64e-ceremonie-des-grammy-awards.jpg")
 david.photo.attach(io: file, filename: "davidguetta.jpg", content_type: "image/jpg")
 david.save
@@ -41,16 +41,28 @@ amy.save
 
 puts "User created"
 
-Matching1 = Matching.create!(user: david, user_two_id: jimi.id, user_one_status: "accept", user_two_status: "accept")
-Matching2 = Matching.create!(user: kurt, user_two_id: david.id, user_one_status: "accept", user_two_status: "accept")
-Matching3 = Matching.create!(user: david, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
-Matching4 = Matching.create!(user: david, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
-Matching5 = Matching.create!(user: eric, user_two_id: jimi.id, user_one_status: "pending", user_two_status: "pending")
-Matching6 = Matching.create!(user: eric, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
-Matching7 = Matching.create!(user: eric, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
-Matching8 = Matching.create!(user: eric, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
-Matching9 = Matching.create!(user: jimi, user_two_id: eric.id, user_one_status: "pending", user_two_status: "pending")
-Matching10 = Matching.create!(user: jimi, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
-Matching11 = Matching.create!(user: jimi, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
-Matching12 = Matching.create!(user: jimi, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
+matching1 = Matching.create!(user: david, user_two_id: jimi.id, user_one_status: "accept", user_two_status: "accept")
+matching2 = Matching.create!(user: kurt, user_two_id: david.id, user_one_status: "accept", user_two_status: "accept")
+matching3 = Matching.create!(user: david, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
+matching4 = Matching.create!(user: david, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
+matching5 = Matching.create!(user: eric, user_two_id: jimi.id, user_one_status: "pending", user_two_status: "pending")
+matching6 = Matching.create!(user: eric, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
+matching7 = Matching.create!(user: eric, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
+matching8 = Matching.create!(user: eric, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
+matching9 = Matching.create!(user: jimi, user_two_id: eric.id, user_one_status: "pending", user_two_status: "pending")
+matching10 = Matching.create!(user: jimi, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
+matching11 = Matching.create!(user: jimi, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
+matching12 = Matching.create!(user: jimi, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
 puts "Matching created"
+
+chatroom1 = Chatroom.create!(matching_id: matching1.id)
+chatroom2 = Chatroom.create!(matching_id: matching2.id)
+chatroom3 = Chatroom.create!(matching_id: matching3.id)
+chatroom4 = Chatroom.create!(matching_id: matching4.id)
+chatroom5 = Chatroom.create!(matching_id: matching5.id)
+chatroom6 = Chatroom.create!(matching_id: matching6.id)
+chatroom7 = Chatroom.create!(matching_id: matching7.id)
+chatroom8 = Chatroom.create!(matching_id: matching8.id)
+
+
+puts "Chatrooms created"
