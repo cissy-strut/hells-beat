@@ -1,6 +1,7 @@
 <div class="headmessage">
   <h1> Messages </h1>
-   <div class="backbtn333">
+
+  <div class="backbtn333">
     <%= link_to matchings_path do %>
     <%= image_tag "backblack.png", alt: "back" %>
     <% end %>
@@ -8,6 +9,7 @@
 </div>
 
 <div class="messagesencours">
+
 <p>Discutions</p>
   <% @matchings_with_user_ref.each do |matching| %>
     <div class="dialchat">
@@ -25,12 +27,13 @@
 
 
   <% @matchings_with_other_user.each do |matching| %>
-  <div class="dialchat">
-    <div>
-      <%= cl_image_tag User.find(matching.user_id).photo.key%>
-      <strong><%= matching.first_associated_user.nickname.upcase %></strong>, <%= matching.first_associated_user.instrument.capitalize %>
-      <%= matching.first_associated_user.city %>
+    <div class="dialchat">
+      <div>
+        <%= cl_image_tag User.find(matching.user_id).photo.key%>
+        <strong><%= matching.first_associated_user.nickname.upcase %></strong>, <%= matching.first_associated_user.instrument.capitalize %>,
+        <%= matching.first_associated_user.city %>
+      </div>
     </div>
-  </div>
   <% end %>
-  </div>
+
+</div>
