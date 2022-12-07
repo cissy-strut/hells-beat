@@ -53,6 +53,7 @@ matching9 = Matching.create!(user: jimi, user_two_id: eric.id, user_one_status: 
 matching10 = Matching.create!(user: jimi, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
 matching11 = Matching.create!(user: jimi, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
 matching12 = Matching.create!(user: jimi, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
+
 puts "Matching created"
 
 chatroom1 = Chatroom.create!(matching_id: matching1.id)
@@ -63,6 +64,9 @@ chatroom5 = Chatroom.create!(matching_id: matching5.id)
 chatroom6 = Chatroom.create!(matching_id: matching6.id)
 chatroom7 = Chatroom.create!(matching_id: matching7.id)
 chatroom8 = Chatroom.create!(matching_id: matching8.id)
-
+chatroom9 = Chatroom.create!(matching_id: matching9.id)
+chatroom10 = Chatroom.create!(matching_id: matching10.id)
+chatroom11 = Chatroom.create!(matching_id: matching11.id)
+chatroom12 = Chatroom.create!(matching_id: matching12.id)
 
 puts "Chatrooms created"
