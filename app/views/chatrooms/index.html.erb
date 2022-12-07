@@ -1,6 +1,5 @@
 <div class="headmessage">
   <h1> Messages </h1>
-
   <div class="backbtn333">
     <%= link_to matchings_path do %>
     <%= image_tag "backblack.png", alt: "back" %>
@@ -8,10 +7,34 @@
   </div>
 </div>
 
+<div class="matchencours">
+  <p>CONNEXIONS</p>
+  <div class="flexy">
+    <% @matchings_with_user_ref.each do |matching| %>
+      <div class="flexlink">
+        <%= link_to chatroom_path(matching.chatroom.id) do %>
+          <div class="fleximg">
+            <%= cl_image_tag User.find(matching.user_two_id).photo.key%>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% @matchings_with_other_user.each do |matching| %>
+      <div class="flexlink">
+        <%= link_to chatroom_path(matching.chatroom.id) do %>
+          <div class="fleximg">
+            <%= cl_image_tag User.find(matching.user_id).photo.key%>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <div class="messagesencours">
 
-  <p>Discutions</p>
-  
+  <p>MESSAGES</p>
+
     <% @matchings_with_user_ref.each do |matching| %>
       <div class="dialchat">
         <%= link_to chatroom_path(matching.chatroom.id) do %>

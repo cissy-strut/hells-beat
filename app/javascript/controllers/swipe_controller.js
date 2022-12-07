@@ -3,8 +3,7 @@ import 'hammerjs'
 
 // Connects to data-controller="swipe"
 export default class extends Controller {
-  static targets = [ "refuseButton" ]
-  static targets = [ "acceptButton" ]
+  static targets = [ "refuseButton", "acceptButton"]
 
   connect() {
     console.log(this.refuseButtonTarget)
