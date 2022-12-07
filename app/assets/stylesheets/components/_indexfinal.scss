@@ -250,14 +250,14 @@ margin-bottom: 20px;
   margin-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  color: #11273C;
+  color: #ffffff;
 }
 .matchencours p{
   margin-top: 20px;
   margin-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  color: #11273C;
+  color: #ffffff;
 }
 
 .flexy {
@@ -273,7 +273,7 @@ margin-bottom: 20px;
   height: 70px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #11273C;
+  border: 2px solid #ff5050;
   margin:0 10px;
 
 }
@@ -396,7 +396,7 @@ label.form-label.file.optional{
   position: absolute;
   top:175px;
   left:220px;
-  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+  box-shadow: 0 0 0 0.25rem rgba(233, 92, 53, 0.323);
 }
 
 .dialchat a{
@@ -410,10 +410,10 @@ label.form-label.file.optional{
 }
 
 .tag-style + label {
-  border: 1px solid #11273C;
+  border: 1px solid #ffffff;
   border-radius: 20px;
-  background-color: #11273c0e;
-  color: #11273c !important;
+  background-color: #ffffff0e;
+  color: #ffffff !important;
   text-align: center;
   margin-top: 5px;
   padding-top: 20px;
@@ -424,8 +424,8 @@ label.form-label.file.optional{
 .tag-style:checked + label {
 
   color: #ffffff !important;
-  background-color: #11273c;
-  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+  background-color: #ff3939b8;
+  box-shadow: 0 0 0 0.25rem rgba(212, 27, 27, 0.323);
 }
 
 .tag-instrument {
@@ -434,10 +434,10 @@ label.form-label.file.optional{
 }
 
 .tag-instrument + label {
-  border: 1px solid #11273C;
+  border: 1px solid #ffffff;
   border-radius: 20px;
-  background-color: #11273c0e;
-  color: #11273c !important;
+  background-color: #ffffff0e;
+  color: #ffffff !important;
   text-align: center;
   margin-top: 5px;
   padding-top: 30px;
@@ -448,8 +448,8 @@ label.form-label.file.optional{
 .tag-instrument:checked + label {
 
   color: #ffffff !important;
-  background-color: #11273c;
-  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+  background-color: #ff3939b8;
+  box-shadow: 0 0 0 0.25rem rgba(212, 27, 27, 0.323);
 }
 
 .form-control.is-valid:focus {
@@ -468,18 +468,18 @@ label.form-label.file.optional{
 .tag-experience:checked + label {
 
   color: #ffffff !important;
-  background-color: #11273c;
-  box-shadow: 0 0 0 0.25rem rgba(27, 193, 212, 0.323);
+  background-color: #ff3939b8;
+  box-shadow: 0 0 0 0.25rem rgba(212, 27, 27, 0.323);
 }
 .tag-experience + label {
-  border: 1px solid #11273C;
+  border: 1px solid #ffffff;
   border-radius: 20px;
-  background-color: #11273c0e;
-  color: #11273c !important;
+  background-color: #ffffff0e;
+  color: #ffffff !important;
   text-align: center;
   margin-top: 5px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 90px;
 }
 .tag-experience {
@@ -581,4 +581,42 @@ input#user_birth_date.form-select.mx-1.is-valid.date.optional {
   top: 545px;
   left: 355px;
 
+}
+
+.background1 {
+  background-color:rgb(0, 0, 0);
+  height: 844px;
+  width: 392px;
+  background-position: center;
+}
+
+.texthome p{
+  color: white;
+  text-align: center;
+  font-family: arial;
+  margin-top: 100px;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.mybtn77 {
+  margin-top: 30px;
+  display: inline-block;
+  text-decoration: none;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: white;
+  width: 50%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.53);
+
+}
+body {
+  background-color: black;
+  color: white;
 }
