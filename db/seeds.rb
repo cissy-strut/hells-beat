@@ -9,7 +9,7 @@ User.destroy_all
 
 puts "Database cleaned"
 
-david = User.create!(nickname: 'Sylvain', instrument: 'guitare', city: 'Nantes', email: 'spe@nge.fr', password: '6404perezM', bio: "Je cherche désespérément des musiciens expérimentés en Rock'n'Roll pour buffer toute la nuit, je dispose d'un grand espace de jeu :feu:.", experience: "expert", style: "Rock'n'Roll", birth_date: "1991-4-12")
+david = User.create!(nickname: 'Sylvain', instrument: 'guitare', city: 'Nantes', email: 'spe@nge.fr', password: 'azerty', bio: "Je cherche désespérément des musiciens expérimentés en Rock'n'Roll pour buffer toute la nuit, je dispose d'un grand espace de jeu :feu:.", experience: "expert", style: "Rock'n'Roll", birth_date: "1991-4-12")
 file = URI.open("https://images.rtl.fr/\~c/2000v2000/funradio/www/1533519-david-guetta-lors-de-la-64e-ceremonie-des-grammy-awards.jpg")
 david.photo.attach(io: file, filename: "davidguetta.jpg", content_type: "image/jpg")
 david.save

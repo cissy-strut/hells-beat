@@ -14,9 +14,37 @@
 }
 
 .sender-style {
-  background-color: lightcoral;
+  background-color: #11273C;
+  color: white;
+  border-radius: 20px;
 }
 
 .receiver-style {
-  background-color: lightblue;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: #11273C;
+  border: 1px solid #11273C;
+}
+.titlemessage {
+  text-align: center;
+  height: 70px;
+
+}
+.titlemessage img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.mybtn44 {
+  text-align: center;
+  background-color: #11273C;
+  border: none;
+  color: white;
+  height: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 16px;
+  margin-left: 10px;
 }
