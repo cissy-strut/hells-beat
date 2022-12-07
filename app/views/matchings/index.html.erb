@@ -1,18 +1,18 @@
-<div class="bodyindex">
-<div class="banner">
-  <div class="small"><a href="users/edit"> <%= image_tag "reglage.png", alt: "le logo" %></a></div>
-  <div class="biglogo"><a href="/">  <%= image_tag "logo.png", alt: "le logo" %> </a></div>
-  <div class="small">
-    <%= link_to chatrooms_path do %>
-      <%= image_tag "message.png", alt: "le logo" %>
-    <% end %>
+<div class="bodyindex" data-controller="swipe">
+  <div class="banner">
+    <div class="small"><a href="users/edit"> <%= image_tag "reglage.png", alt: "le logo" %></a></div>
+    <div class="biglogo"><a href="/">  <%= image_tag "logo.png", alt: "le logo" %> </a></div>
+    <div class="small">
+      <%= link_to chatrooms_path do %>
+        <%= image_tag "message.png", alt: "le logo" %>
+      <% end %>
+    </div>
+
   </div>
 
-</div>
-
-<div class="mycard">
-      <div class="profiles">
-  <% @matchings.each do |matching| %>
+  <div class="mycard">
+    <div class="profiles">
+      <% @matchings.each do |matching| %>
         <div class="profile">
           <%= link_to matching_path(matching) do %>
             <div class="profile__image" style="background-image:  url('<%= cl_image_path User.find(matching.user_two_id).photo.key%>')">
@@ -24,22 +24,23 @@
           <% end %>
         </div>
 
-        <div class="bottombar">
-          <div class="bottombar__button">
-            <%= button_to refuse_matching_path(matching), method: :patch, data: {turbo: false} do %>
+      <% end %>
+      <div class="bottombar">
+        <div class="bottombar__button">
+          <%= button_to refuse_matching_path(@matchings.last),
+            method: :patch,
+            data: { turbo: false, swipe_target: "refuseButton" } do %>
               <%= image_tag "croix.png", alt: "Le logo" %>
             <% end %>
-          </div>
-          <div class="bottombar__button">
-            <%= button_to accept_matching_path(matching), method: :patch, data: {turbo: false} do %>
-              <%= image_tag "coeur.png", alt: "Le logo" %>
-            <% end %>
-          </div>
         </div>
-  <% end %>
+        <div class="bottombar__button">
+          <%= button_to accept_matching_path(@matchings.last),
+          method: :patch,
+          data: {turbo: false, swipe_target: "acceptButton"} do %>
+            <%= image_tag "coeur.png", alt: "Le logo" %>
+          <% end %>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-</div>
-
-<script src='hammer.min.js'></script>
-<script src='main.js'></script>

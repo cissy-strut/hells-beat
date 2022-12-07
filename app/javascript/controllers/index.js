@@ -10,3 +10,5 @@ application.register("chatroom-subscription", ChatroomSubscriptionController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import SwipeController from "./swipe_controller"
+application.register("swipe", SwipeController)
