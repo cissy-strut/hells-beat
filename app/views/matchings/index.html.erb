@@ -26,20 +26,22 @@
 
       <% end %>
       <div class="bottombar">
-        <div class="bottombar__button">
-          <%= button_to refuse_matching_path(@matchings.last),
+        <%if @matchings.present?%>
+          <div class="bottombar__button">
+            <%= button_to refuse_matching_path(@matchings.last),
+              method: :patch,
+              data: { turbo: false, swipe_target: "refuseButton" } do %>
+                <%= image_tag "croix.png", alt: "Le logo" %>
+              <% end %>
+          </div>
+          <div class="bottombar__button">
+            <%= button_to accept_matching_path(@matchings.last),
             method: :patch,
-            data: { turbo: false, swipe_target: "refuseButton" } do %>
-              <%= image_tag "croix.png", alt: "Le logo" %>
+            data: {turbo: false, swipe_target: "acceptButton"} do %>
+              <%= image_tag "coeur.png", alt: "Le logo" %>
             <% end %>
-        </div>
-        <div class="bottombar__button">
-          <%= button_to accept_matching_path(@matchings.last),
-          method: :patch,
-          data: {turbo: false, swipe_target: "acceptButton"} do %>
-            <%= image_tag "coeur.png", alt: "Le logo" %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
