@@ -9,10 +9,10 @@ User.destroy_all
 
 puts "Database cleaned"
 
-david = User.create!(nickname: 'Sylvain', instrument: 'guitare', city: 'Nantes', email: 'spe@nge.fr', password: 'azerty', bio: "Je cherche désespérément des musiciens expérimentés en Rock'n'Roll pour buffer toute la nuit, je dispose d'un grand espace de jeu :feu:.", experience: "expert", style: "Rock'n'Roll", birth_date: "1991-4-12")
-file = URI.open("https://images.rtl.fr/\~c/2000v2000/funradio/www/1533519-david-guetta-lors-de-la-64e-ceremonie-des-grammy-awards.jpg")
-david.photo.attach(io: file, filename: "davidguetta.jpg", content_type: "image/jpg")
-david.save
+sylvain = User.create!(nickname: 'Sylvain', instrument: 'guitare', city: 'Nantes', email: 'spe@nge.fr', password: 'azerty', bio: "Je cherche désespérément des musiciens expérimentés en Rock'n'Roll pour buffer toute la nuit, je dispose d'un grand espace de jeu :feu:.", experience: "expert", style: "Rock'n'Roll", birth_date: "1991-4-12")
+file = URI.open("https://res.cloudinary.com/dy6mp30ja/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1670505092/sylvain_d6fbo4.jpg")
+sylvain.photo.attach(io: file, filename: "sylvain.jpg", content_type: "image/jpg")
+sylvain.save
 
 jimi = User.create!(nickname: 'Jimi-Hendrix', instrument: 'guitare', city: 'Nantes', email: 'jimi.hendrix@gmail.com', password: 'jimi44', bio: "Je cherche un acolyte qui m'apprendra à jouer de la guitare différemment que derrière la tête, avec les dents :dent: ou qu'en la brûlant:feu:en vue d'un prochain album de jazz.", experience: "expert", style: "Blues", birth_date: "1945-3-30")
 file = URI.open("https://cdns-images.dzcdn.net/images/artist/2deec542fc75d5691434c407ee077ff7/500x500.jpg")
@@ -41,12 +41,12 @@ amy.save
 
 puts "User created"
 
-matching1 = Matching.create!(user: david, user_two_id: jimi.id, user_one_status: "accept", user_two_status: "accept")
-matching2 = Matching.create!(user: kurt, user_two_id: david.id, user_one_status: "accept", user_two_status: "accept")
-matching3 = Matching.create!(user: david, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
-matching4 = Matching.create!(user: david, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
-matching5 = Matching.create!(user: david, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
-matching6 = Matching.create!(user: david, user_two_id: eric.id, user_one_status: "pending", user_two_status: "pending")
+matching1 = Matching.create!(user: sylvain, user_two_id: jimi.id, user_one_status: "accept", user_two_status: "accept")
+matching2 = Matching.create!(user: kurt, user_two_id: sylvain.id, user_one_status: "accept", user_two_status: "accept")
+matching3 = Matching.create!(user: sylvain, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
+matching4 = Matching.create!(user: sylvain, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
+matching5 = Matching.create!(user: sylvain, user_two_id: amy.id, user_one_status: "pending", user_two_status: "pending")
+matching6 = Matching.create!(user: sylvain, user_two_id: eric.id, user_one_status: "pending", user_two_status: "pending")
 matching7 = Matching.create!(user: eric, user_two_id: kurt.id, user_one_status: "pending", user_two_status: "pending")
 matching8 = Matching.create!(user: eric, user_two_id: bob.id, user_one_status: "pending", user_two_status: "pending")
 matching9 = Matching.create!(user: jimi, user_two_id: eric.id, user_one_status: "pending", user_two_status: "pending")

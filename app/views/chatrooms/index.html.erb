@@ -36,24 +36,29 @@
   <p>MESSAGES</p>
 
     <% @matchings_with_user_ref.each do |matching| %>
-      <div class="dialchat">
+      <div class="linkchat">
         <%= link_to chatroom_path(matching.chatroom.id) do %>
-          <div >
+          <div class="dialchat">
             <%= cl_image_tag User.find(matching.user_two_id).photo.key%>
-            <strong><%= matching.second_associated_user.nickname.upcase %></strong>, <%= matching.second_associated_user.instrument.capitalize %>
-            <%= matching.second_associated_user.city %>
+            <div class="insidec">
+              <strong><%= matching.second_associated_user.nickname.upcase %></strong>,
+
+              <p id="dede"><%= matching.second_associated_user.city %> <%= matching.second_associated_user.instrument.capitalize %></p>
+            </div>
           </div>
         <% end %>
       </div>
     <% end %>
 
     <% @matchings_with_other_user.each do |matching| %>
-      <div class="dialchat">
+      <div class="linkchat">
         <%= link_to chatroom_path(matching.chatroom.id) do %>
-          <div>
+          <div class="dialchat">
             <%= cl_image_tag User.find(matching.user_id).photo.key%>
-            <strong><%= matching.first_associated_user.nickname.upcase %></strong>, <%= matching.first_associated_user.instrument.capitalize %>,
-            <%= matching.first_associated_user.city %>
+            <div class="insidec">
+              <strong><%= matching.first_associated_user.nickname.upcase %>,</strong>
+              <p id="dede"><%= matching.first_associated_user.city %>, <%= matching.first_associated_user.instrument.capitalize %></p>
+            </div>
           </div>
         <% end %>
       </div>

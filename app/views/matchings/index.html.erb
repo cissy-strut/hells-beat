@@ -17,7 +17,8 @@
           <%= link_to matching_path(matching) do %>
             <div class="profile__image" style="background-image:  url('<%= cl_image_path User.find(matching.user_two_id).photo.key%>')">
               <div class="profile__infos">
-                <div class="profile__name"><span class="profile__age"> <strong><%= matching.second_associated_user.nickname.upcase %></strong> , <%= matching.second_associated_user.age %> ans <p class="textop" ><%= matching.second_associated_user.city %> ,<%= matching.second_associated_user.instrument.capitalize %> </p></span>
+                <div class="profile__name"><span class="profile__age"> <strong><%= matching.second_associated_user.nickname.upcase %></strong> , <%= matching.second_associated_user.age %> ans <p class="textop" ><%= matching.second_associated_user.city %> , </p></span>
+
                 </div>
               </div>
             </div>
