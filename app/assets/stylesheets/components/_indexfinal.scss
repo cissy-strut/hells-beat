@@ -586,3 +586,15 @@ input#user_birth_date.form-select.mx-1.is-valid.date.optional {
   width: 392px;
   color: white;
 }
+
+.profile__age img{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -445px;
+  left: 240px;
+}
+
+body {
+  background-color: white;
+}
