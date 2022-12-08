@@ -174,24 +174,21 @@
 .profile--matching::after, .profile--nexting::after {
   content:'OUI';
   font-weight: bold;
-  font-size:28px;
-  padding:8px 12px;
-  border:solid 2px rgb(91, 238, 91);
+  font-size:56px;
+  padding:32px 44px;
   color:rgb(91, 238, 91);
   background:var(--black-transparent);
   position:absolute;
-  top:24px;
-  right:210px;
+  top:370px;
+  right: 130px;
   border-radius: 4px;
-  transform:rotate(-24deg);
+  transform:rotate(deg);
 }
 .profile--nexting::after {
   content:'NON';
-  border:solid 2px red;
   color:red;
-  top: 24px;
-  right:12px;
-  transform:rotate(24deg)
+  top: 370px;
+  right:10px;
 }
 
 .photoedit img  {
@@ -581,4 +578,11 @@ input#user_birth_date.form-select.mx-1.is-valid.date.optional {
   top: 545px;
   left: 355px;
 
+}
+
+.background1 {
+  background-image: asset-url("illu.png");
+  height: 845px;
+  width: 392px;
+  color: white;
 }
