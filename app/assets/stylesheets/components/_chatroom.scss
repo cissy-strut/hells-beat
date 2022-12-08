@@ -14,7 +14,7 @@
   }
 
   .messages {
-    height: 80%;
+    height: 50%;
     overflow: scroll;
     padding: 1rem;
   }
@@ -27,4 +27,9 @@
       margin-bottom: 0;
     }
   }
+}
+
+
+#backfr {
+  position: fixed;
 }
