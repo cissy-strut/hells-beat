@@ -1,5 +1,5 @@
 meta_product_name: "Ztrut"
 meta_title: "Ztrut - Former un groupe grâce à vos voisins"
 meta_description: "Application pour rencontrer, trouver des musiciens pour jouer de la musique"
-meta_image: "illufb.jpeg" # should exist in `app/assets/images/`
+meta_image: "illufb.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
