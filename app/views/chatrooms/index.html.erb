@@ -37,10 +37,11 @@
 
     <% @matchings_with_user_ref.each do |matching| %>
       <div class="dialchat">
+          <div class="dedede">
         <%= link_to chatroom_path(matching.chatroom.id) do %>
-          <div >
             <%= cl_image_tag User.find(matching.user_two_id).photo.key%>
-            <strong><%= matching.second_associated_user.nickname.upcase %></strong>, <%= matching.second_associated_user.instrument.capitalize %>
+            <strong><%= matching.second_associated_user.nickname.upcase %></strong>,
+            <%= matching.second_associated_user.instrument.capitalize %>
             <%= matching.second_associated_user.city %>
           </div>
         <% end %>

@@ -1,4 +1,4 @@
-   <div class="backbtn333">
+   <div class="backbtn333" id="backfr" >
     <%= link_to chatrooms_path do %>
     <%= image_tag "backblack.png", alt: "back" %>
     <% end %>
@@ -20,7 +20,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div id="positionmsg">
     <%= simple_form_for [@chatroom, @message],
       html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
     %>
