@@ -35,7 +35,7 @@ leo.photo.attach(io: file, filename: "leomarley.jpg", content_type: "image/jpg")
 leo.save
 
 kartus = User.create!(nickname: 'Kartus', instrument: 'Voix', city: 'Nantes', email: 'kartus@gmail.com', password: 'azerty', bio: "Chanteur de météo mirage j'aime aussi jouer du clavier donc si jamais vous voulez jouer avec moi je suis sur Nantes city", experience: "Expert", style:"Blues", birth_date: "1995-10-07")
-file = URI.open("https://media.vogue.fr/photos/5c360db03b3a64c63eb378b5/master/w_1600%2Cc_limit/winehouse_3797.jpeg?lang=eng")
+file = URI.open("https://www.artymag.com/wp-content/uploads/2021/02/METEO-MIRAGE-ON-STAIRS-SESSION-%C2%A9Anoussa-Chea-6-scaled.jpg")
 kartus.photo.attach(io: file, filename: "kartuswinehouse.jpg", content_type: "image/jpg")
 kartus.save
 
