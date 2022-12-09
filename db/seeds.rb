@@ -39,6 +39,16 @@ file = URI.open("https://www.artymag.com/wp-content/uploads/2021/02/METEO-MIRAGE
 kartus.photo.attach(io: file, filename: "kartuswinehouse.jpg", content_type: "image/jpg")
 kartus.save
 
+johann = User.create!(nickname: 'Johann', instrument: 'Voix', city: 'Nantes', email: 'johann@gmail.com', password: 'azerty', bio: "Chanteur de météo mirage j'aime aussi jouer du clavier donc si jamais vous voulez jouer avec moi je suis sur Nantes city", experience: "Confirmé", style:"Jazz", birth_date: "1987-7-17")
+file = URI.open("https://www.udiscovermusic.com/wp-content/uploads/2020/11/Mark-Knopfler-GettyImages-88426318.jpg")
+johann.photo.attach(io: file, filename: "johannwinehouse.jpg", content_type: "image/jpg")
+johann.save
+
+arman = User.create!(nickname: 'Arman', instrument: 'Voix', city: 'Nantes', email: 'arman@gmail.com', password: 'azerty', bio: "Chanteur de météo mirage j'aime aussi jouer du clavier donc si jamais vous voulez jouer avec moi je suis sur Nantes city", experience: "Confirmé", style:"Jazz", birth_date: "1987-7-17")
+file = URI.open("https://www.fragil.org/wp-content/uploads/2022/10/Armand.jpg")
+arman.photo.attach(io: file, filename: "arman.jpg", content_type: "image/jpg")
+arman.save
+
 puts "User created"
 
 matching1 = Matching.create!(user: sylvain, user_two_id: romain.id, user_one_status: "pending", user_two_status: "accept")
