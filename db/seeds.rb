@@ -44,7 +44,7 @@ file = URI.open("https://www.udiscovermusic.com/wp-content/uploads/2020/11/Mark-
 johann.photo.attach(io: file, filename: "johannwinehouse.jpg", content_type: "image/jpg")
 johann.save
 
-arman = User.create!(nickname: 'Arman', instrument: 'Voix', city: 'Nantes', email: 'arman@gmail.com', password: 'azerty', bio: "Chanteur de météo mirage j'aime aussi jouer du clavier donc si jamais vous voulez jouer avec moi je suis sur Nantes city", experience: "Confirmé", style:"Jazz", birth_date: "1987-7-17")
+arman = User.create!(nickname: 'Armand', instrument: 'Voix', city: 'Nantes', email: 'arman@gmail.com', password: 'azerty', bio: "Chanteur de météo mirage j'aime aussi jouer du clavier donc si jamais vous voulez jouer avec moi je suis sur Nantes city", experience: "Confirmé", style:"Jazz", birth_date: "1987-7-17")
 file = URI.open("https://www.fragil.org/wp-content/uploads/2022/10/Armand.jpg")
 arman.photo.attach(io: file, filename: "arman.jpg", content_type: "image/jpg")
 arman.save
@@ -63,7 +63,8 @@ matching9 = Matching.create!(user: romain, user_two_id: pierre.id, user_one_stat
 matching10 = Matching.create!(user: romain, user_two_id: kartus.id, user_one_status: "pending", user_two_status: "pending")
 matching11 = Matching.create!(user: romain, user_two_id: tanguy.id, user_one_status: "pending", user_two_status: "pending")
 matching12 = Matching.create!(user: romain, user_two_id: leo.id, user_one_status: "pending", user_two_status: "pending")
-
+matching13 = Matching.create!(user: sylvain, user_two_id: arman.id, user_one_status: "pending", user_two_status: "pending")
+matching14 = Matching.create!(user: sylvain, user_two_id: johann.id, user_one_status: "pending", user_two_status: "pending")
 puts "Matching created"
 
 chatroom1 = Chatroom.create!(matching_id: matching1.id)
