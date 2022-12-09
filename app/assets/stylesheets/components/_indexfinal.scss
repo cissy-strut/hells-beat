@@ -444,6 +444,10 @@ label.form-label.file.optional{
   width: 90px;
 }
 
+div.form-check{
+  margin-bottom: 30px;
+}
+
 .tag-instrument:checked + label {
 
   color: #ffffff !important;
@@ -595,7 +599,7 @@ input#user_birth_date.form-select.mx-1.is-valid.date.optional {
   height: 60px;
   position: absolute;
   top: -445px;
-  left: 260px;
+  right: 10px;
 }
 
 body {
