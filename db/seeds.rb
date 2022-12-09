@@ -51,6 +51,8 @@ arman.save
 
 puts "User created"
 
+matching14 = Matching.create!(user: sylvain, user_two_id: johann.id, user_one_status: "pending", user_two_status: "pending")
+matching13 = Matching.create!(user: sylvain, user_two_id: arman.id, user_one_status: "pending", user_two_status: "pending")
 matching1 = Matching.create!(user: sylvain, user_two_id: romain.id, user_one_status: "pending", user_two_status: "accept")
 matching2 = Matching.create!(user: tanguy, user_two_id: sylvain.id, user_one_status: "accept", user_two_status: "accept")
 matching3 = Matching.create!(user: sylvain, user_two_id: tanguy.id, user_one_status: "pending", user_two_status: "pending")
@@ -63,8 +65,6 @@ matching9 = Matching.create!(user: romain, user_two_id: pierre.id, user_one_stat
 matching10 = Matching.create!(user: romain, user_two_id: kartus.id, user_one_status: "pending", user_two_status: "pending")
 matching11 = Matching.create!(user: romain, user_two_id: tanguy.id, user_one_status: "pending", user_two_status: "pending")
 matching12 = Matching.create!(user: romain, user_two_id: leo.id, user_one_status: "pending", user_two_status: "pending")
-matching13 = Matching.create!(user: sylvain, user_two_id: arman.id, user_one_status: "pending", user_two_status: "pending")
-matching14 = Matching.create!(user: sylvain, user_two_id: johann.id, user_one_status: "pending", user_two_status: "pending")
 puts "Matching created"
 
 chatroom1 = Chatroom.create!(matching_id: matching1.id)
